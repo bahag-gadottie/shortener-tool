@@ -15,6 +15,7 @@ from sqlalchemy import (
 from databases import Database
 
 # TODO: improve the way I handle different environments
+
 # with open('/Users/gadotte/bahag/shortener-tool/src/.env') as f:
 #     param_list = f.read().split('\n')
 #     kv_params = {}
