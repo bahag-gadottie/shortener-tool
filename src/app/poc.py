@@ -5,6 +5,20 @@ from app.core.misc import sanitize, tokenize, replace, wrap, token_sort_ratio
 import random
 import math
 
+
+# def load_from_abbreviations_com():
+#     with open('/Users/gadotte/projects files/shortener-tool/out_abbreviations.jl') as f:
+#         obj = []
+#         for line in f:
+#             d = json.loads(line)
+#             [obj.append((k,v)) for k,v in d.items() if v]
+#
+#         df = pd.DataFrame(obj)
+#         df.rename(columns={0: 'shc_name', 1: 'shc_description'}, inplace=True)
+#         df['product_group'] = 'abbrev_com'
+#         insert_pg('postgres', df, 'shc_tool_definitions', delete_prev=False)
+
+
 products_poc = """
         '4037756002008',
         '4037756002053',
