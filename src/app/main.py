@@ -6,7 +6,7 @@ import os
 import sys
 sys.path.append(os.getcwd())
 from app.api import abbreviations, ping
-from app.db.db import database, engine, metadata
+from app.db.db_definitions import database, engine, metadata
 
 metadata.create_all(engine)
 

@@ -1,4 +1,4 @@
-from app.db.db import database
+from app.db.db_definitions import database
 from app.models import abbreviations
 from app.db.abbreviations import abbreviations_table
 

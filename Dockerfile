@@ -3,12 +3,12 @@ FROM python:3.9.4-alpine
 MAINTAINER PCTeam pcteam@bahag.com
 
 # set work directory
-WORKDIR /usr/src/
+WORKDIR /usr/
 
 # set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
-ENV PYTHONPATH "${PYTHONPATH}:./app/:./app/api/"
+ENV PYTHONPATH "${PYTHONPATH}:/usr/src/app/:/usr/src/"
 
 # copy requirements file
 COPY ./requirements.txt ./requirements.txt
@@ -36,4 +36,8 @@ RUN pip install PyHyphen==4.0.3 --no-binary :all:
 RUN rm -rf /root/.cache/pip
 
 # copy project
-COPY . /usr/src/
+COPY . /usr/
+
+EXPOSE 8000
+CMD exec uvicorn app.main:app --host 0.0.0.0 --port 8000
+
