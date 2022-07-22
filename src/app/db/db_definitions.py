@@ -33,9 +33,6 @@ if not DATABASE_URL:
     # localhost:
     DATABASE_URL = "postgresql://postgres:postgres@localhost:54320/shortener_db"
 
-logging.warning(f'\n\n\nLogged in with the following database_url: "{DATABASE_URL}"')
-
-
 # SQLAlchemy
 engine = create_engine(DATABASE_URL)
 metadata = MetaData()
